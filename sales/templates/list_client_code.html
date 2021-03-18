@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Baza klientów</title>
+</head>
+<body>
+<table>
+    <thead>
+    <tr class="d-flex text-color-darker">
+    <th>Skrócona nazwa</th>
+    <th>Pełna nazwa:</th>
+    <th>NIP: </th>
+    <th>strona www:</th>
+    <th>Źródło leada:</th>
+    <th>Status:</th>
+    </tr>
+
+    </thead>
+    <tbody>
+    {% for client in client_list %}
+        <tr class="d-flex">
+            <td class="col-2">{{ client.short_name }}</td>
+            <td class="col-2">{{ client.full_name }}</td>
+            <td class="col-2">{{ client.tax_number }}</td>
+            <td class="col-2">{{ client.website }}</td>
+            <td class="col-2">{{ client.source_lead }}</td>
+            <td class="col-2">{{ client.status }}</td>
+
+            <td class="col-2 d-flex align-items-center justify-content-center flex-wrap">
+                <a href="#" class="btn btn-danger rounded-0 text-light m-1">Usuń</a>
+                <a href="#" class="btn btn-info rounded-0 text-light m-1">Szczegóły</a>
+                <a href="#" class="btn btn-warning rounded-0 text-light m-1">Edytuj</a>
+            </td>
+        </tr>
+        {% endfor %}
+
+
+    </tbody>
+</table>
+
+
+</body>
+</html>

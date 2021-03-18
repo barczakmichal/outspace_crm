@@ -1,0 +1,94 @@
+{% block content %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form action="" method="POST" id="form_add-client">
+    {% csrf_token %}
+    <button type="submit">Dodaj</button>
+
+    <table>
+        <tr>
+            <th>Skrócona nazwa klienta</th>
+            <td>
+                <input type="text" name="short_name" id="short_name" value="">
+            </td>
+
+        </tr>
+
+        <tr>
+            <th>Nazwa klienta</th>
+            <td>
+                <input type="text" name="full_name" id="full_name" value="">
+            </td>
+
+        </tr>
+
+        <tr>
+            <th>Miasto</th>
+            <td>
+                <input type="text" name="city" id="city" value="">
+            </td>
+        </tr>
+
+        <tr>
+            <th>Ulica</th>
+            <td>
+                <input type="text" name="street" id="street" value="">
+            </td>
+        </tr>
+
+        <tr>
+            <th>NIP</th>
+            <td>
+                <input type="number" name="tax_number" id="tax_number" value="">
+            </td>
+        </tr>
+
+        <tr>
+            <th>Branża</th>
+            <td>
+                <input type="text" name="industry" id="industry" value="">
+            </td>
+        </tr>
+        <tr>
+            <th>Strona www</th>
+            <td>
+                <input type="text" name="website" id="website" value="">
+            </td>
+        </tr>
+
+        <tr>
+            <th><label for="source_lead">Źródło leada</label></th>
+            <td>
+            <select name="source_lead" id="source_lead">
+                    <option value="test 1">Test 1</option>
+                    </select>
+
+            </td>
+        </tr>
+
+        <tr>
+            <th><label for="status">Status leada</label></th>
+            <td>
+            <select name="status" id="status">
+                    <option value="test 1">Test 1</option>
+                    </select>
+
+            </td>
+        </tr>
+
+
+    </table>
+
+
+</form>
+
+</body>
+</html>
+
+{% endblock content %}
